@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val context = LocalContext.current // ✅ Otteniamo il contesto Android corretto per Compose
+            val context = LocalContext.current
 
             BachecaTheme {
                 Scaffold(
@@ -50,8 +50,6 @@ class MainActivity : ComponentActivity() {
                         if (!viewModel.isBoardVisible) {
                             GateScreen(
                                 onEnter = { group, name ->
-                                    // Se il tuo ViewModel accetta il context passalo qui,
-                                    // altrimenti puoi usare viewModel.enterGroup(group, name)
                                     viewModel.enterGroup(context, group, name)
                                     true
                                 }

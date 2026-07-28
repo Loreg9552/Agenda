@@ -241,7 +241,6 @@ private fun TopHeaderBar(
                 Text(text = myName, fontSize = 13.sp, fontWeight = FontWeight.Bold, color = PaperText)
             }
         }
-
         // Riga 2: Pulsanti Import ed Export JSON su una riga dedicata sotto
         Row(
             modifier = Modifier.fillMaxWidth(),
